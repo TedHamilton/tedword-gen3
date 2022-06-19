@@ -1,6 +1,5 @@
 // Assignment code here
-
-
+window.alert ("Click button for password!!!");
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
