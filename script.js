@@ -1,7 +1,9 @@
 // Assignment code here
 window.alert ("Click button for password!!!");
 
-
+function getRandomLower() {
+ return String.fromCharCode(97);   
+}
  
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -12,10 +14,7 @@ function writePassword() {
   var chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
   var passwordLength = 9;
   var password = "";
-  for (var i = 0; i <= passwordLength; i++) {
-    var randomNumber = Math.floor(Math.random() * chars.length);
-    password += chars.substring(randomNumber, randomNumber +1);
-  }
+  
   
   document.getElementById("password").value = password;
  
