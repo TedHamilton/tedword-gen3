@@ -9,7 +9,12 @@ function writePassword() {
   var password = document.getElementById("password");
   var passwordText = document.querySelector("#password");
 
-
+const randomFunc = {
+  lower: getRandomLower,
+  upper: getRandomUpper,
+  number: getRandomNumber,
+  symbol: getRandomSymbol
+};
   function getRandomLower() {
     return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
    
