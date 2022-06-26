@@ -11,7 +11,7 @@ function writePassword() {
 
 const resultEl = document.getElementById("result")
 const lengthEl = document.getElementById("length")
-const uppercaseaEl = document.getElementById("uppercase")
+const uppercaseEl = document.getElementById("uppercase")
 const lowercaseEl = document.getElementById("lowercase")
 const numbersEl = document.getElementById("numbers")
 const symbolsEl = document.getElementById("symbols")
@@ -44,7 +44,33 @@ generateEl.addEventListener("click" , () =>{
 
 
 function generatePassword(lower, upper, number, symbol, length){
-  
+
+  let generatePassword = '';
+
+  const typesCount = lower + upper + number + symbol;
+
+  console.log('typesCount: ', typesCount);
+
+  const typesArr = [{ lower }, { upper }, { number }, { symbol } ].filter
+  (
+    item => Objective.values(item)[0]
+  );
+
+  if(typesCount === 0) {
+    return '';
+  }
+
+  for (let i = 0; i < length; i += typesCount) {
+    typesArr.forEach(types => {
+      const funcName = object.keys(type)[0];
+      generatedPassword += randomFunc[funcName]();
+    })
+  }
+
+  const finalPassword = generatedPassword.slice(0,length)
+
+  return finalPassword;
+
 }
 
 
